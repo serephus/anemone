@@ -7,7 +7,12 @@
 
     <ul class="content-list">
         {# Use paginator if it exists, else regular pages #}
-        {% for page in paginator.pages | default(value=section.pages) %}
+        {% if paginator %}
+            {% set page_list = paginator.pages %}
+        {% else %}
+            {% set page_list = section.pages %}
+        {% endif %}
+        {% for page in page_list %}
             {% include "partials/content-listing-item.html" %}
         {% endfor %}
     </ul>
