@@ -3,7 +3,7 @@
     <p>Made using <a target="_blank" rel="noopener noreferrer" href="https://github.com/Speyll/anemone">anemone</a> Zola theme</p>
 </div>
 
-{% if page.extra.math %}
+{% if page and page.extra and page.extra.math %}
 <script>
   MathJax = {
     tex: {
