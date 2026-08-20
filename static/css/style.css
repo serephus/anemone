@@ -133,3 +133,14 @@
 .webring {
   margin: .375rem;
 }
+
+/* home page avatar */
+.avatar {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 24rem;
+    height: 24rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+}

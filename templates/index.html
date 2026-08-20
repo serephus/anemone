@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% set avatar = config.extra.avatar %}
+    {% if avatar %}
+        {% if avatar is starting_with("http://") or avatar is starting_with("https://") %}
+        <img class="avatar" src="{{ avatar }}" alt="{{ config.extra.author | default(value=config.title) }}">
+        {% else %}
+        <img class="avatar" src="{{ get_url(path=avatar) }}" alt="{{ config.extra.author | default(value=config.title) }}">
+        {% endif %}
+    {% endif %}
+
     {{ section.content | safe }}
 
     {% if config.extra.list_pages %}
