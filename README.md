@@ -127,6 +127,18 @@ Customize the display of the author's name in your blog posts by toggling the `d
 display_author = true
 ```
 
+
+#### Avatar on the Home Page
+
+Show a circular avatar at the top of the home page by setting the image in `config.toml`:
+
+```toml
+[extra]
+avatar = "/images/avatar.jpg"
+```
+
+The path can be site-relative (recommended) or an absolute URL. The image is rendered as a circle; drop the file into your site `static/` directory.
+
 ### Webrings
 
 Add a webring with a shortcode:
